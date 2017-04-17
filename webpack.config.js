@@ -7,7 +7,8 @@ const APP  = path.join(SRC, "app");
 
 module.exports = {
     entry: {
-        "js/main": path.join(APP, "main.ts")
+        "js/vendor.bundle": [ "rxjs", "core-js", "zone.js" ],
+        "js/main.bundle": "./src/app/main.ts"
     },
     output: {
         path: DIST,
@@ -28,5 +29,6 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({template: path.join(SRC, "index.html")})
-    ]
+    ],
+    devtool: 'source-map'
 }
