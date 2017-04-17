@@ -1,10 +1,10 @@
 var path = require("path");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: "./src/main.ts",
     output: {
         path: path.resolve(__dirname, './dist'),
-        publicPath: "/dist/",
         filename: 'bundle.js',
     },
 
@@ -22,4 +22,9 @@ module.exports = {
     resolve: {
         extensions: [ '.ts' ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/index.html"
+        })
+    ]
 }
