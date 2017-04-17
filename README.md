@@ -1,2 +1,10 @@
-# angular4-webpack-starter
-Angular v4 starter project using webpack v2
+# Angular 4 Starter Project
+includes:
+- bootstrap
+- font-awesome
+- basic webpack2 configuration
+
+usage:
+- npm install
+- npm (run build:dev|build:prod)
+- npm start
