@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --progress",
-        "build": "webpack --progress",
-        "dist": "webpack -p --progress"
+        "start": "webpack-dev-server --inline",
+        "build:dev": "webpack -d --hide-modules",
+        "build:prod": "webpack -p --hide-modules"
     },
     "keywords": [],
     "author": "Cédric Meuter",
