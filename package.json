@@ -6,7 +6,7 @@
     "scripts": {
         "start": "webpack-dev-server --progress",
         "build": "webpack --progress",
-        "build:prod": "webpack -p --progress"
+        "dist": "webpack -p --progress"
     },
     "keywords": [],
     "author": "Cédric Meuter",
