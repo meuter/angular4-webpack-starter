@@ -17,7 +17,8 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.ts$/, loader: 'ts-loader', options: { 'silent': true } },
+            { test: /\.ts$/, loader: 'awesome-typescript-loader?silent=true!angular2-template-loader' },
+            { test: /\.html$/, loader: 'html-loader' },
             { test: /\.css/, loader: 'style-loader!css-loader' },
             { test: /\.(svg|ttf|eot|woff(2)?)$/, loader: 'file-loader?name=fonts/[name].[ext]' },
         ]
