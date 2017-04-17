@@ -17,7 +17,7 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.ts$/, loader: 'ts-loader' }
+            { test: /\.ts$/, loader: 'ts-loader', options: { 'silent': true } }
         ]
     },
     resolve: {
@@ -32,5 +32,4 @@ module.exports = {
         new HtmlWebpackPlugin({template: path.join(SRC, "index.html")}),
         new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)@angular/, SRC)
     ],
-    devtool: 'source-map'
 }
