@@ -1,6 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './modules/app.module';
+import {enableProdMode} from '@angular/core';
 
-// TODO(cme): enableProdMode is env is set
-
+enableProdMode();
 platformBrowserDynamic().bootstrapModule(AppModule);
