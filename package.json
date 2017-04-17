@@ -1,32 +1,38 @@
 {
-    "name": "sample-app",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "webpack-dev-server --inline",
-        "build:dev": "webpack -d --progress --hide-modules",
-        "build:prod": "webpack -p --progress --hide-modules"
-    },
-    "keywords": [],
-    "author": "Cédric Meuter",
-    "license": "MIT",
-    "devDependencies": {
-        "@angular/common": "^4.0.2",
-        "@angular/compiler": "^4.0.2",
-        "@angular/core": "^4.0.2",
-        "@angular/platform-browser": "^4.0.2",
-        "@angular/platform-browser-dynamic": "^4.0.2",
-        "@types/node": "^7.0.12",
-        "core-js": "^2.4.1",
-        "html-webpack-plugin": "^2.28.0",
-        "reflect-metadata": "^0.1.10",
-        "rxjs": "^5.3.0",
-        "ts-loader": "^2.0.3",
-        "typescript": "^2.2.2",
-        "web-dev-server": "^1.0.5",
-        "webpack": "^2.4.1",
-        "webpack-dev-server": "^2.4.2",
-        "zone.js": "^0.8.5"
-    }
+  "name": "sample-app",
+  "version": "1.0.0",
+  "description": "EMV Certification website",
+  "repository": ".git/",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline",
+    "build:dev": "webpack -d --progress --hide-modules",
+    "build:prod": "webpack -p --progress --hide-modules"
+  },
+  "keywords": [],
+  "author": "Cédric Meuter",
+  "license": "MIT",
+  "devDependencies": {
+    "@angular/common": "^4.0.2",
+    "@angular/compiler": "^4.0.2",
+    "@angular/core": "^4.0.2",
+    "@angular/platform-browser": "^4.0.2",
+    "@angular/platform-browser-dynamic": "^4.0.2",
+    "@types/node": "^7.0.12",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "jquery": "^3.2.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.3.0",
+    "style-loader": "^0.16.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.2.2",
+    "web-dev-server": "^1.0.5",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2",
+    "zone.js": "^0.8.5"
+  }
 }

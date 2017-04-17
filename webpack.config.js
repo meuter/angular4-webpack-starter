@@ -17,11 +17,13 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.ts$/, loader: 'ts-loader', options: { 'silent': true } }
+            { test: /\.ts$/, loader: 'ts-loader', options: { 'silent': true } },
+            { test: /\.css/, loader: 'style-loader!css-loader' },
+            { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file-loader' }
         ]
     },
     resolve: {
-        extensions: [ '.ts', '.js' ],
+        extensions: ['.ts', '.js', '.json', '.css', '.html'],
     },
     devServer: {
         publicPath: "/",
@@ -30,6 +32,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({template: path.join(SRC, "index.html")}),
-        new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)@angular/, SRC)
+        new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)@angular/, SRC),
+        new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" })
     ],
+    devtool: 'eval'
 }
