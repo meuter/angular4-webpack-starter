@@ -2,10 +2,12 @@ var path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./src/main.ts",
+    entry: {
+        "js/main": "./src/main.ts"
+    },
     output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js',
     },
 
     module: {
@@ -13,9 +15,6 @@ module.exports = {
             {
                 test: /\.ts$/,
                 loader: 'ts-loader',
-                options: {
-                    transpileOnly: true
-                }
             }
         ]
     },
