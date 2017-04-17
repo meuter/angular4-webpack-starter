@@ -33,7 +33,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({template: path.join(SRC, "index.html")}),
         new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)@angular/, SRC),
-        new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" })
+        new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" }),
     ],
-    devtool: 'eval'
+    devtool: 'cheap-module-source-map'
 }
