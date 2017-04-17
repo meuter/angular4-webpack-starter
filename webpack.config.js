@@ -19,7 +19,7 @@ module.exports = {
         rules: [
             { test: /\.ts$/, loader: 'ts-loader', options: { 'silent': true } },
             { test: /\.css/, loader: 'style-loader!css-loader' },
-            { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file-loader' }
+            { test: /\.(svg|ttf|eot|woff(2)?)$/, loader: 'file-loader?name=fonts/[name].[ext]' },
         ]
     },
     resolve: {
