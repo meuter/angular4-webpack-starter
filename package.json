@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --inline",
-        "build:dev": "webpack -d --hide-modules",
-        "build:prod": "webpack -p --hide-modules"
+        "build:dev": "webpack -d",
+        "build:prod": "webpack -p"
     },
     "keywords": [],
     "author": "Cédric Meuter",
