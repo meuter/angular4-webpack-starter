@@ -4,17 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "build": "webpack",
     "build:prod": "webpack -p"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Cédric Meuter",
+  "license": "MIT",
   "devDependencies": {
     "html-webpack-plugin": "^2.28.0",
     "ts-loader": "^2.0.3",
     "typescript": "^2.2.2",
     "web-dev-server": "^1.0.5",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }

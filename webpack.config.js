@@ -1,15 +1,17 @@
 var path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+DIST = path.resolve(__dirname, "dist");
+SRC  = path.resolve(__dirname, "src");
+
 module.exports = {
     entry: {
-        "js/main": "./src/main.ts"
+        "js/main": path.join(SRC, "main.ts")
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: DIST,
         filename: '[name].js',
     },
-
     module: {
         rules: [
             {
@@ -19,11 +21,16 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.ts' ]
+        extensions: [ '.ts', '.js' ],
+    },
+    devServer: {
+        publicPath: "/",
+        contentBase: DIST,
+        port: "4200"
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.html"
+            template: path.join(SRC, "index.html")
         })
     ]
 }
