@@ -19,8 +19,9 @@ module.exports = {
         rules: [
             { test: /\.ts$/, loader: 'awesome-typescript-loader?silent=true!angular2-template-loader' },
             { test: /\.html$/, loader: 'html-loader' },
-            { test: /\.css/, loader: 'style-loader!css-loader' },
-            { test: /\.(svg|ttf|eot|woff(2)?)$/, loader: 'file-loader?name=fonts/[name].[ext]' },
+            { test: /\.css/, exclude: SRC, loader: 'style-loader!css-loader' },
+            { test: /\.css/, include: SRC, loader: 'raw-loader' },
+            { test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'file-loader?name=fonts/[name].[ext]' },
         ]
     },
     resolve: {
