@@ -17,4 +17,4 @@ npm start
 
 # 3. build a standalone version for deployment
 npm build:prod
-'''
+```
