@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: [ "./app.component.css" ]
 })
 export class AppComponent {
-    readonly greetings : string = "Hello World";
+    readonly greetings = "Hello World";
+    readonly foos = [ "foo", "bar", "baz" ];
 }
