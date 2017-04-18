@@ -4,4 +4,11 @@
     <ul>
         <li *ngFor="let person of persons | filterBy : ['name'] : inputValue">{{ person.name }}</li>
     </ul>
+
+    <a routerLink="/foo" routerLinkActive="active">Click here for Foo</a>
+    <a routerLink="/bar" routerLinkActive="active">Click here for Bar</a>    
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>
 </div>
