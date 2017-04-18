@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: "app",
@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
     readonly greetings = "Hello World";
     readonly foos = [ "foo", "bar", "baz" ];
+    @Input() inputValue: string;
 }
